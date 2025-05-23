@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Layout</title>
+
+  <style>
+    :root {
+      --dark-blue: #1B3A57;
+      --medium-blue: #2E86AB;
+      --light-blue: #A9D6E5;
+      --dark-green: #1E5631;
+      --medium-green: #A4DE02;
+      --light-green: #D4ED91;
+      --white: #FFFFFF;
+      --gray: #F4F4F4;
+      --dark-bg: #1E1E1E;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column; /* Ensure that the header is at the top */
+      height: 100vh;
+      background: var(--dark-bg);
+      color: var(--white);
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--medium-blue);
+      color: var(--white);
+      padding: 20px 30px;
+      font-size: 24px;
+      font-weight: 600;
+      width: 100%; /* Ensure header spans the full width */
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: var(--white);
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+      flex-direction: row; /* Ensure the sidebar and main content are side by side */
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: var(--dark-green);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .sidebar p {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: var(--white);
+      padding: 12px;
+      border-radius: 5px;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background: var(--medium-green);
+      color: var(--dark-blue);
+    }
+
+    .main-content {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 30px;
+      background: var(--gray);
+    }
+
+    .box {
+      background: var(--white);
+      color: var(--dark-blue);
+      padding: 20px;
+      border-radius: 8px;
+      font-size: 18px;
+      text-align: center;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .box:hover {
+      background: var(--medium-blue);
+      color: var(--white);
+      transform: scale(1.05);
+    }
+
+    .box-large {
+      grid-column: span 2;
+      background-color: var(--dark-green);
+      color: var(--white);
+    }
+
+    .box-small {
+      background-color: var(--medium-blue);
+      color: var(--white);
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .main-content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <span>Dashboard Header</span>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <div class="container">
+    <div class="sidebar">
+      <p>Sidebar Menu</p>
+      <a href="index.html">Home</a>
+      <a href="#">Profile</a>
+      <a href="#">Settings</a>
+      <a href="#">Analytics</a>
+      <a href="#">Support</a>
+      <a href="#">Logout</a>
+    </div>
+
+    <div class="main-content">
+      <div class="box">Class</div>
+      <div class="box">Graph of sales</div>
+      <div class="box">Sales</div>
+      <div class="box">Schedule</div>
+      <div class="box">Prices</div>
+      <div class="box">Items</div>
+      <div class="box box-large">Report</div> <!-- Large box for Report -->
+      <div class="box box-small">Subscribe!</div> <!-- Small box for Subscribe -->
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.sidebar').classList.toggle('active');
+    }
+  </script>
+
+</body>
+
+</html>
