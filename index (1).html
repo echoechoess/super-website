@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog Web Design Principles</title>
+	 <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+     alert("Welcome to my website!");
+
+    });
+
+   </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            transition: background 0.3s;
+        }
+        header:hover {
+            background: #555; /* Darker shade on hover */
+        }
+        nav {
+            background: #444;
+            padding: 0.5cm;
+            text-align: center;
+        }
+        nav a {
+            color: white; /* Keep links white */
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc00; /* Change color on hover */
+        }
+        nav a:active {
+            color: #ff9900; /* Change color when clicked */
+        }
+        nav a:visited {
+            color: #cccccc; /* Change color for visited links (light gray) */
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+        section {
+            flex: 2;
+            padding: 20px;
+            background: white;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        aside {
+            flex: 1;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        footer:hover {
+            background: #555; /* Darker shade on hover */
+        }
+        article {
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            transition: box-shadow 0.3s;
+        }
+        article:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>All about Echoechoes</h1>
+        <p>Sharing knowledge about web design, HTML5, CSS, and JavaScript</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="#">Home</a>
+        <a href="about us.html">About Us</a>
+		<a href="gallery.html">Gallery</a>
+        <a href="Contact.html">Contact Us</a>
+    </nav>
+    <!-- Main Content -->
+    <main>
+        <!-- Blog Section -->
+        <section>
+            <h2>Latest Blog Posts</h2>
+
+            <article>
+                <h3>Understanding HTML5 Semantics</h3>
+                <p>HTML5 introduced new semantic elements that help define the structure of web pages...</p>
+                <a href="#">Read More</a>
+            </article>
+
+            <article>
+                <h3>CSS Flexbox: A Beginner's Guide</h3>
+                <p>Flexbox is a powerful tool for creating responsive layouts with minimal code...</p>
+                <a href="#">Read More</a>
+            </article>
+
+        </section>
+
+        <!-- Sidebar Section-->
+        <aside>
+            <h2>About Me</h2>
+            <p>Hello! I'm Jericho A. Labasan. A web design student focused on front-end development and user experience.</p>
+
+            <h3>Popular Topics</h3>
+            <ul>
+                <li><a href="#">HTML & CSS Basics</a></li>
+                <li><a href="#">JavaScript Fundamentals</a></li>
+                <li><a href="#">Responsive Web Design</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 My Blog. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

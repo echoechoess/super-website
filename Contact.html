@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff; /* white background */
+      color: #333;
+      padding: 40px 20px;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 16px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #444; /* dark gray for title */
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background-color: #999; /* light gray underline */
+      display: block;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      background-color: #fff;
+      transition: border 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    select:focus,
+    textarea:focus {
+      border: 2px solid #888;
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(150, 150, 150, 0.2);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    input[type="submit"] {
+      background-color: #333; /* light gray */
+      color: #FFFFFF;
+      padding: 14px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #333; /* darker light gray on hover */
+      transform: scale(1.05);
+    }
+
+    .map-section {
+      margin-top: 50px;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .map-section h3 {
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    iframe {
+      width: 100%;
+      border: 0;
+      border-radius: 12px;
+      height: 450px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container,
+      .map-section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form action="/action_page.php">
+      <input type="text" id="fname" name="name" placeholder="Name">
+      <input type="text" id="lname" name="email" placeholder="Email">
+
+      <select id="region" name="region">
+        <option value="region1">Region I (Ilocos Region)</option>
+        <option value="ncr">National Capital Region (NCR)</option>
+        <option value="region2">Region II (Cagayan Valley)</option>
+        <option value="region3">Region III (Central Luzon)</option>
+        <option value="region4a">Region IV-A (CALABARZON)</option>
+        <option value="region4b">Region IV-B (MIMAROPA)</option>
+        <option value="region5">Region V (Bicol Region)</option>
+        <option value="region6">Region VI (Western Visayas)</option>
+        <option value="region7">Region VII (Central Visayas)</option>
+        <option value="region8">Region VIII (Eastern Visayas)</option>
+        <option value="region9">Region IX (Zamboanga Peninsula)</option>
+        <option value="region10">Region X (Northern Mindanao)</option>
+        <option value="region11">Region XI (Davao Region)</option>
+        <option value="region12">Region XII (SOCCSKSARGEN)</option>
+        <option value="caraga">Caraga</option>
+        <option value="armm">Autonomous Region in Muslim Mindanao (ARMM)</option>
+        <option value="car">Cordillera Administrative Region (CAR)</option>
+        <option value="region13">Region XIII (Caraga)</option>
+      </select>
+
+      <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+
+      <input type="submit" value="Submit →">
+    </form>
+  </div>
+
+  <div class="map-section">
+    <h3>How to Get Here</h3>
+    <p>We're located at 900 San Marcelino St Ermita Manila via Google Maps:</p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.414147847783!2d120.98175747473317!3d14.5847999857087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ca245234b97f%3A0x4151557533233dd1!2sAdamson%20University!5e0!3m2!1sen!2sph!4v1715268949841!5m2!1sen!2sph">
+    </iframe>
+  </div>
+
+</body>
+</html>
